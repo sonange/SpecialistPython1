@@ -15,3 +15,9 @@ fruits = ["яблоко", "банан", "киви", "арбуз"]
 
 # Важно! Ваше решение должно работать с любыми корректными "исходными данными"
 # Проверьте это, добавив или удалив несколько элементов списка
+len_list = []
+for elem in fruits:
+    len_list.append(len(elem))
+max_len = max(len_list)
+for elem in fruits:
+    print(fruits.index(elem) + 1, elem.rjust(max_len, ' '))
