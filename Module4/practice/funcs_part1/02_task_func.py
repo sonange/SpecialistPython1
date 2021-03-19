@@ -4,7 +4,13 @@
 # * попробуйте решить данную задачу, не преобразуя число к строке
 
 def palindrome(number):
-    pass
+    number_to_str = str(number)
+    rem_2 = len(number_to_str) % 2
+    middle_index = len(number_to_str) // 2
+    if number_to_str[:middle_index + 1 * rem_2] == number_to_str[:middle_index - 1:-1]:
+        return True
+    else:
+        return False
 
 
 # Тестируем функцию
